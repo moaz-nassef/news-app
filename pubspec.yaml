@@ -1,5 +1,5 @@
 name: news_app
-description: "A new Flutter project."
+description: "A modern Flutter news app — top headlines, categories and favorites from NewsAPI."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
@@ -45,6 +45,8 @@ dependencies:
   simple_gradient_text: ^1.3.0
   webview_flutter: ^4.7.0
   webview_flutter_wkwebview: ^3.12.0
+  url_launcher: ^6.3.2
+  meta: ^1.18.0
 
 dev_dependencies:
   flutter_test:

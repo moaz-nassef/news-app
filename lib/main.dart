@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:news_app/core/themes/myTheme.dart';
+import 'package:news_app/core/themes/my_theme.dart';
 import 'package:news_app/features/category/viewModel/category_cubit.dart';
 import 'package:news_app/features/category/viewModel/repo/category_news.dart';
 import 'package:news_app/features/home/data/repo/home_services.dart';
@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiBlocProvider(
       providers: [
         BlocProvider(
-          create: (context) =>
-          HomeCubit(HomeServices())
-            ..getHomeData(),
+          create: (context) => HomeCubit(HomeServices()),
         ),
         BlocProvider(
           create: (context) => CategoryCubit(GetCategoricalArticles()),
@@ -32,7 +30,7 @@ class MyApp extends StatelessWidget {
         theme: MyTheme.myTheme,
 
         debugShowCheckedModeBanner: false,
-        home: SplashView(),
+        home: const SplashView(),
       ),
     );
   }

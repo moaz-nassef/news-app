@@ -11,26 +11,24 @@ class CategoryCubit extends Cubit<CategoryState> {
 
   final GetCategoricalArticles categoricalArticles;
 
-  Future<void> getCategoryAction(String categoryName)async
-       {
+  Future<void> getCategoryAction(String categoryName) async {
     //emiting the state to navigate to another page
-    emit(CategoryClickedActionState(categoryName:categoryName ));
+    emit(CategoryClickedActionState(categoryName: categoryName));
   }
 
   //method to handle the data loading event of specific category articles
-  Future<void> categoryDataLoadingEvent(String categoryName)
-    async {
+  Future<void> categoryDataLoadingEvent(String categoryName) async {
     emit(CategoryDataLoadingState());
 
     //call the data loading method and emit the data loaded state
-    var result = await GetCategoricalArticles.getIndianHeadlines(categoryName);
+    final result = await categoricalArticles.getIndianHeadlines(categoryName);
 
-    //if the result is not false then -->
-    if(result != false){
+    //if the result is null that means something went wrong
+    if (result != null) {
       //emit the data successfully loaded state : op
       emit(CategoryDataLoadedState(articleList: result));
+    } else {
+      emit(CategoryDataErrorState());
     }
   }
-
-
 }

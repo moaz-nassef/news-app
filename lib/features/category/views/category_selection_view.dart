@@ -5,7 +5,7 @@ import 'package:news_app/features/category/viewModel/category_cubit.dart';
 import 'package:news_app/features/category/views/category_article_view.dart';
 import 'package:news_app/features/category/views/widgets/category_tile_widget.dart';
 
-import '../../../core/themes/myTheme.dart';
+import '../../../core/themes/my_theme.dart';
 import '../../../core/shared/bottom_navigation.dart';
 
 class CategorySelectionView extends StatelessWidget {
@@ -15,20 +15,13 @@ class CategorySelectionView extends StatelessWidget {
   Widget build(BuildContext context) {
     //list for categories
     List<String> categoryList = [
-      "Cricket",
       "Business",
       "Entertainment",
       "General",
+      "Health",
       "Science",
       "Sports",
       "Technology",
-      "Music",
-      "Gaming",
-      "Anime",
-      "Health",
-      "Education",
-      "Crime",
-      "Weather"
     ];
     return Scaffold(
       //bottom navigation
@@ -42,12 +35,13 @@ class CategorySelectionView extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) =>  CategoryArticleView(categoryName: state.categoryName,)));
+                        builder: (context) => CategoryArticleView(
+                            categoryName: state.categoryName)));
               }
             },
             builder: (context, state) {
               return Padding(
-                padding: const EdgeInsets.all(22),
+                padding: const EdgeInsets.fromLTRB(18, 22, 18, 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -63,41 +57,46 @@ class CategorySelectionView extends StatelessWidget {
                       style: MyTheme.myTheme.textTheme.displaySmall,
                     ),
 
+                    const SizedBox(height: 24),
+
                     //categories mapping within the gridview
                     Expanded(
                       child: GridView.builder(
-                          gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 25,
-                          ),
-                          itemCount: categoryList.length,
-                          itemBuilder: (context, index) {
-                            return InkWell(
-                              onTap: () {
-                                BlocProvider.of<CategoryCubit>(context).getCategoryAction(categoryList[index]);
-                              },
-                              child: CategoryTileWidget(
-                                  categoryImagePath:
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                          crossAxisCount: 2,
+                          crossAxisSpacing: 14,
+                          mainAxisSpacing: 14,
+                          childAspectRatio: 1.15,
+                        ),
+                        itemCount: categoryList.length,
+                        itemBuilder: (context, index) {
+                          return InkWell(
+                            borderRadius: BorderRadius.circular(18),
+                            onTap: () {
+                              BlocProvider.of<CategoryCubit>(context)
+                                  .getCategoryAction(categoryList[index]);
+                            },
+                            child: CategoryTileWidget(
+                              categoryImagePath:
                                   "assets/images/cat${index + 1}.jpg",
-                                  categoryName: categoryList[
-                                  index]) //adding the required animations at the end
-
-                              //adding the animate addon
-                                  .animate()
-
-                              //adding fadeIn effect
-                                  .fadeIn(
-                                  duration: const Duration(seconds: 2),
-                                  curve: Curves.decelerate)
-
-                              //adding the shimmer effect
-                                  .shimmer(
-                                  duration: const Duration(seconds: 3),
-                                  curve: Curves.fastEaseInToSlowEaseOut),
-                            );
-                          }),
-                    )
+                              categoryName: categoryList[index],
+                            )
+                                .animate()
+                                .fadeIn(
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeOut,
+                                )
+                                .slideY(
+                                  begin: 0.06,
+                                  end: 0,
+                                  duration: const Duration(milliseconds: 500),
+                                  curve: Curves.easeOutCubic,
+                                ),
+                          );
+                        },
+                      ),
+                    ),
                   ],
                 ),
               );

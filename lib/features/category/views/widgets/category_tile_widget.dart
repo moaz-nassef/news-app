@@ -8,31 +8,50 @@ class CategoryTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //stack
     return Stack(
-      alignment: Alignment.bottomLeft,
+      fit: StackFit.expand,
       children: [
-        //to show the background image
         ClipRRect(
-            borderRadius: BorderRadius.circular(8),
-            child: Image.asset(
-              color: Colors.black26,
-              colorBlendMode: BlendMode.darken,
-              categoryImagePath,
-              width: 205,
-              height: 158,
-              fit: BoxFit.cover,
-            )),
-
-        //to show the front layer text representing the category name
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 2,vertical:24),
+          borderRadius: BorderRadius.circular(18),
+          child: Image.asset(
+            categoryImagePath,
+            fit: BoxFit.cover,
+          ),
+        ),
+        // Dark gradient overlay so the label always stands out.
+        ClipRRect(
+          borderRadius: BorderRadius.circular(18),
+          child: DecoratedBox(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+                colors: [
+                  Colors.black.withValues(alpha: 0.05),
+                  Colors.black.withValues(alpha: 0.0),
+                  Colors.black.withValues(alpha: 0.65),
+                ],
+              ),
+            ),
+          ),
+        ),
+        // Label
+        Positioned(
+          left: 12,
+          right: 12,
+          bottom: 10,
           child: Text(
             categoryName,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
             style: const TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.w700),
+              color: Colors.white,
+              fontSize: 19,
+              fontWeight: FontWeight.w800,
+              letterSpacing: 0.2,
+            ),
           ),
-        )
+        ),
       ],
     );
   }

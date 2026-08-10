@@ -22,3 +22,6 @@ class CategoryDataLoadedState extends CategoryState {
 
   CategoryDataLoadedState({required this.articleList});
 }
+
+// 3. suppose the category news articles failed to load
+class CategoryDataErrorState extends CategoryState {}
