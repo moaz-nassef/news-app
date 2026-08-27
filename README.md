@@ -1,4 +1,4 @@
-<div align="center">
+﻿<div align="center">
 
 # 📰 Flutter News App
 
@@ -221,3 +221,15 @@ Made with 💜 using Flutter & Dart
 ⭐ **If you like it, please star the repo!** ⭐
 
 </div>
+
+<!-- SCREENSHOTS-AUTO-START -->
+## Screenshots
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/cover.jpeg" alt="Cover" width="720"/>
+</p>
+
+<p align="center"><img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%201.jpeg" alt="صورة 1" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%202.jpeg" alt="صورة 2" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%203.jpeg" alt="صورة 3" width="200"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%204.jpeg" alt="صورة 4" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%205.jpeg" alt="صورة 5" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%206.jpeg" alt="صورة 6" width="200"/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%207.jpeg" alt="صورة 7" width="200"/></p>
+<!-- SCREENSHOTS-AUTO-END -->
