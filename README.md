@@ -1,6 +1,15 @@
 ﻿<div align="center">
 
 # 📰 Flutter News App
+<p align="center">
+  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/cover.jpeg" alt="news-app cover" width="720"/>
+</p>
+
+<p align="center">
+  <a href="#screenshots">
+    <img src="https://img.shields.io/badge/View_All_Screenshots-02569B?style=for-the-badge&logo=image&logoColor=white" alt="View all screenshots"/>
+  </a>
+</p>
 
 > **Your daily news, one tap away — top headlines, curated categories, an in-app reader and a personal favorites list, all in a polished gradient UI.**
 
@@ -225,9 +234,7 @@ Made with 💜 using Flutter & Dart
 <!-- SCREENSHOTS-AUTO-START -->
 ## Screenshots
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/cover.jpeg" alt="Cover" width="720"/>
-</p>
+Below are all the app screenshots. The cover image is shown above; tap the button under it to jump back here.
 
 <p align="center"><img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%201.jpeg" alt="صورة 1" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%202.jpeg" alt="صورة 2" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%203.jpeg" alt="صورة 3" width="200"/></p>
 <p align="center"><img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%204.jpeg" alt="صورة 4" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%205.jpeg" alt="صورة 5" width="200"/>  <img src="https://raw.githubusercontent.com/moaz-nassef/news-app/main/screenshots/%D8%B5%D9%88%D8%B1%D8%A9%206.jpeg" alt="صورة 6" width="200"/></p>
